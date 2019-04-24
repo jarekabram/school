@@ -1,0 +1,23 @@
+<h1>items removed</h1>
+
+<table>
+{% for s in subjects %}
+  <tr>
+    <th> {{ forloop.counter }} </th>
+    <th> {{ s.name }} </th>
+    <th> {{ s.teacher.name }} </th>
+  </tr>
+{% endfor %}
+</table>
+
+<p>return to home page: <label onclick="redirectToHome()">HOME</label></p>
+<p>return to students page: <label onclick="redirectToSubject()">SUBJECTS</label></p>
+
+<script>
+function redirectToHome() {
+  location.replace("..\\home")
+}
+function redirectToSubject() {
+  location.replace("..\\subject")
+}
+</script>

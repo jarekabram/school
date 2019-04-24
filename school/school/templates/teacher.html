@@ -1,0 +1,45 @@
+<h1>Teachers</h1>
+
+<form method="GET" action="removed">
+{% if teachers %}
+<table>
+  <tr>
+    <th> # </th>
+    <th> Imie </th>
+    <th> Witryna </th>
+  </tr>
+  {% for t in teachers %}
+    <tr>
+      <th><input type="checkbox" name="item" value="{{ t.id }}"/>
+        <label for="choice{{ forloop.counter }}">{{ choice }}</label>
+      </th>
+      <th> {{ forloop.counter }} </th>
+      <th> {{ t.name }} </th>
+      <th> {{ t.website }} </th>
+    </tr>
+  {% endfor %}
+  </table>
+  <p>
+    <input type="submit" value="Delete" name="delete">
+  </p>
+{% else %}
+  There is no teacher
+{% endif %}
+</form>
+
+<form method="GET" action="added">
+  <h1>Insert teacher</h1>
+  Name: <input type="text" name="name" id="name_input"/>
+  Website: <input type="text" name="website" id="website_input"/>
+  <p>
+    <input type="submit" value="Submit">
+  </p>
+</form>
+
+<p>return to home page: <label onclick="redirectToHome()">HOME</label></p>
+
+<script>
+function redirectToHome() {
+  location.replace("..\\home")
+}
+</script>

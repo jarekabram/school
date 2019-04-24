@@ -1,0 +1,42 @@
+<h1>Subjects</h1>
+
+<form method="GET" action="removed">
+{% if subjects %}
+  <table>
+    <tr>
+      <th> # </th>
+      <th> Przedmiot </th>
+      <th> Prowadzący </th>
+    </tr>
+  {% for s in subjects %}
+    <tr>
+      <th><input type="checkbox" name="item" value="{{ s.id }}"/>
+      <label for="choice{{ forloop.counter }}">{{ choice }}</label></th>
+      <th> {{ forloop.counter }} </th>
+      <th> {{ s.name }} </th>
+      <th> {{ s.teacher.name }} </th>
+    </tr>
+  {% endfor %}
+  </table>
+  <p><input type="submit" value="Delete" name="delete"></p>
+{% else %}
+  There is no subject
+{% endif %}
+</form>
+
+<form method="GET" action="added">
+  <h1>Insert subject</h1>
+  Name: <input type="text" name="name" id="name_input"/>
+  Teacher: <input type="text" name="teacher" id="name_input"/>
+  <p>
+    <input type="submit" value="Submit">
+  </p>
+</form>
+
+<p>return to home page: <label onclick="redirectToHome()">HOME</label></p>
+
+<script>
+function redirectToHome() {
+  location.replace("..\\home")
+}
+</script>

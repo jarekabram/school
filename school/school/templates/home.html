@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style type="text/css" id="gwd-text-style">
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px;
+    }
+  </style>
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    body {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+    }
+    .gwd-button-160h {
+      position: absolute;
+      left: 47px;
+      top: 48px;
+      background-color: rgb(76, 175, 80);
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      height: 60px;
+      width: 120px;
+    }
+    .gwd-button-160h:hover {
+      background-color: rgb(76, 175, 80);
+      color: white;
+    }
+    .gwd-button-1qex {
+      left: 243px;
+      top: 172px;
+    }
+    .gwd-button-1cmb {
+      left: 243px;
+      top: 255px;
+    }
+    .gwd-button-9t8g {
+      left: 243px;
+      top: 86px;
+    }
+  </style>
+</head>
+
+<body class="htmlNoPages">
+  <button id="teacher_button" onclick="redirectToTeachers()" class="gwd-button-160h gwd-button-9t8g">Teachers</button>
+  <button id="subject_button" onclick="redirectToSubjects()" class="gwd-button-160h gwd-button-1cmb">Subjects</button>
+  <button id="student_button" onclick="redirectToStudents()" class="gwd-button-160h gwd-button-1qex">Students</button>
+
+<script>
+function redirectToTeachers() {
+  location.replace(".\\teacher")
+}
+function redirectToSubjects() {
+  location.replace(".\\subject")
+}
+function redirectToStudents() {
+  location.replace(".\\student")
+}
+</script>
+</body>
+
+
+
+</html>
